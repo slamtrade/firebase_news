@@ -1,0 +1,52 @@
+<div style="text-align:center">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="form-area">
+          <form role="form">
+            <h1 class="well">
+              Crypto Trading
+            </h1>
+            <br style="clear:both">
+            <h3 style="margin-bottom: 25px; text-align: left;">Form</h3>
+
+            <div class="form-group">
+              <label for="coin" class="float-left form-label text-left">Coin*</label>
+              <div class="float-left form-input-wrapper">
+                <select class="form-control" id="coin" type="text" name="coin" [(ngModel)]="message.coin" required>
+                  <option value="BTC">BTC</option>
+                  <option value="ETH">ETH</option>
+                  <option value="USD">USD</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="title" class="float-left form-label text-left">Title*</label>
+              <div class="float-left form-input-wrapper">
+                <input type="text" class="form-control" id="title" name="title" placeholder="Title"
+                  [(ngModel)]="message.title" required>
+              </div>
+
+            </div>
+            <div class="form-group">
+              <label for="url" class="float-left form-label text-left">URL*</label>
+              <div class="float-left form-input-wrapper">
+                <input type="text" class="form-control" id="url" name="url" placeholder="URL" [(ngModel)]="message.url"
+                  required>
+              </div>
+            </div>
+
+            <button type="button" id="submit" name="submit" class="btn btn-primary pull-left mr-3"
+              (click)="save()">Submit</button>
+            <button type="button" id="cancel" name="cancel" class="btn btn-primary pull-left mr-3"
+              (click)="cancel()">Cancel</button>
+            
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
